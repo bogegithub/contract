@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: yanbo
+ * Date: 2020/6/2
+ * Time: 20:42
+ */
+namespace Contract\Domain;
+
+use Contract\Exception\ServiceValidException;
+
+class DefaultCursorPage implements CursorPage
+{
+    /**
+     * 当前页面对应的游标
+     */
+    public $pageCursor;
+    public $pageSize;
+    /**
+     * 下一页对应的游标
+     */
+    public $nextCursor;
+    public $hasNext;
+    /**
+     * 查询结果集合
+     */
+    public $results;
+
+    public function __construct(array $results, bool $hasNext, $nextCursor, $pageCursor,
+                                int $pageSize = Pages::DEFAULT_PAGE_SIZE)
+    {
+        if ($pageSize < 1) {
+            throw new ServiceValidException("页记录数不能小于1");
+        }
+        if ($pageSize > Pages::MAX_PAGE_SIZE) {
+            throw new ServiceValidException("单页最多不能超过200条记录");
+        }
+        if ($pageCursor < 0) {
+            throw new ServiceValidException("页游标不能小于0");
+        }
+
+        $this->pageCursor = $pageCursor;
+        $this->pageSize = $pageSize;
+        $this->results = $results ?? [];
+        $this->hasNext = $hasNext;
+        $this->nextCursor = $nextCursor;
+    }
+
+    /**
+     *
+     * @return int|string
+     */
+    function getPageCursor()
+    {
+        return $this->pageCursor;
+    }
+
+    function getPageSize(): int
+    {
+        return $this->pageSize;
+    }
+
+    function getNextCursor()
+    {
+        return $this->nextCursor;
+    }
+
+    function hasNext(): bool
+    {
+        return $this->hasNext;
+    }
+
+    function getResults()
+    {
+        return $this->results;
+    }
+}

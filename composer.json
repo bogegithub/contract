@@ -1,0 +1,26 @@
+{
+    "name": "princebo/contract",
+    "description": "开发一些规范,契约优于配置",
+    "type": "contract",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "php": "^7.",
+        "phpunit/phpunit": "^7.0"
+    },
+    "authors": [
+        {
+            "name": "football.prince",
+            "email": "football.prince.yan@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Princebo\\Contract\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
