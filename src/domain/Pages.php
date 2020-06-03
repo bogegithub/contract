@@ -17,7 +17,7 @@ class Pages
     /**
      * 默认每页显示的记录数
      */
-    const DEFAULT_PAGE_SIZE = 20;
+    const DEFAULT_PAGE_SIZE = 10;
 
     /**
      * 单页最多显示记录数

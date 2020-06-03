@@ -1,6 +1,9 @@
-# Controller返回规约
 
-### 【强制】：Controller的JSON接口方法返回必须是Result对象对应的序列化结果
+# Controller返回规约
+为保障数据结构的统一性，我们整理了一套规约包，要求所有开发在返回数据接口的时候都必须用到这里的类。
+
+### 【强制】：Controller的JSON接口方法返回必须是Results对象对应的序列化结果
+
 除非系统为满足其他外部接口的特殊数据格式要求。
 
 `正例`：
@@ -25,7 +28,6 @@ return Results::success($user);
 Http Status 总是返回200
 
 ## 数据返回API使用手册
-考虑到我们主要是基于Laravel作为Web框架，为保障数据结构的统一性，我们整理了一套规约包，要求所有开发在返回数据接口的时候都必须用到这里的类。
 
 ### 成功调用API
 #### 成功调用且无返回
@@ -45,7 +47,7 @@ return Results.success();
 #### 成功调用且有返回
 
 ```php
-return Results.success(new User(1, "晓燕", 20));
+return Results.success(new User(1, "小凤", 20));
 ```
 序列化生成的JSON为：
 ```$json
@@ -54,7 +56,7 @@ return Results.success(new User(1, "晓燕", 20));
     message:"成功！"
     data: {
         id: 1,
-        name: "晓燕"
+        name: "小凤"
         age: 20
     }
 }
@@ -74,24 +76,24 @@ return Results.success(Pages.page($results, $totalCount, $pageNumber, $pageSize)
     message:"成功！"
     data: {
         pageNumber:10, //当前页
-        pageSize:20, //每页显示记录数
+        pageSize:10, //每页显示记录数
         totalPages:10, //总页
-        totalCount:99, //总记录数
+        totalCount:100, //总记录数
         // 记录集合
         results:[
             {
                 id: 1,
-                name: "晓燕"
+                name: "小凤"
                 age: 20
             },
             {
                 id: 2,
-                name: "少建"
+                name: "小米"
                 age: 20
             },
             {
                 id: 3,
-                name: "小松"
+                name: "小高"
                 age: 20
             }
         ];
@@ -113,23 +115,23 @@ return Results.success(
     message:"成功！"
     data: {
         pageNumber:10, //当前页
-        pageSize:20, //每页显示记录数
+        pageSize:10, //每页显示记录数
         hasNext:true, //有无下一页
         // 记录集合
         results:[
             {
                 id: 1,
-                name: "晓燕"
+                name: "小凤"
                 age: 20
             },
             {
                 id: 2,
-                name: "少建"
+                name: "小米"
                 age: 20
             },
             {
                 id: 3,
-                name: "小松"
+                name: "小高"
                 age: 20
             }
         ];
@@ -165,17 +167,17 @@ return Results.success(Pages.cursorPage($results,
         results:[
             {
                 id: 1,
-                name: "晓燕"
+                name: "小凤"
                 age: 20
             },
             {
                 id: 2,
-                name: "少建"
+                name: "小米"
                 age: 20
             },
             {
                 id: 3,
-                name: "小松"
+                name: "小高"
                 age: 20
             }
         ];

@@ -41,6 +41,7 @@ class DefaultPage implements Page
 
     function __construct(array $results, int $totalCount, int $pageNumber=1, int $pageSize=10)
     {
+        $data = $results['data'] ?? [];
         if ($pageNumber < 1) {
             throw new ServiceValidException("当前页不能小于1");
         }
@@ -55,7 +56,7 @@ class DefaultPage implements Page
         $this->totalCount = $totalCount;
         $this->totalPages = $pageSize != 0  && $totalCount != 0  ?
             ceil((double)$totalCount / (double)$pageSize) : 1;
-        $this->results = $results ?? [];
+        $this->results = $data;
     }
 
     /**
