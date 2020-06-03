@@ -6,9 +6,9 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Exception;
+namespace Princebo\Contract\Exception;
 
-use Contract\Code\ErrorCode;
+use Princebo\Contract\Code\ErrorCode;
 
 class ServiceErrorException extends ServiceException
 {

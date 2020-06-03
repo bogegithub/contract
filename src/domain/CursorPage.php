@@ -6,7 +6,7 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Domain;
+namespace Princebo\Contract\Domain;
 
 /**
  * 游标分页接口

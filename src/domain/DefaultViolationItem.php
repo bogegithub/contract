@@ -6,7 +6,7 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Domain;
+namespace Princebo\Contract\Domain;
 
 /**
  * 默认实现，校验产生错误后会包含这个对象

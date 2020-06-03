@@ -6,13 +6,13 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Domain;
+namespace Princebo\Contract\Domain;
 
-use Contract\Code\ErrorCode;
-use Contract\Code\SuccessCode;
-use Contract\Constants;
-use Contract\Exception\ServiceErrorException;
-use Contract\Exception\ServiceLogicException;
+use Princebo\Contract\Code\ErrorCode;
+use Princebo\Contract\Code\SuccessCode;
+use Princebo\Contract\Constants;
+use Princebo\Contract\Exception\ServiceErrorException;
+use Princebo\Contract\Exception\ServiceLogicException;
 
 /**
  * 默认实现

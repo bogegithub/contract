@@ -6,10 +6,10 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Code;
+namespace Princebo\Contract\Code;
 
 use Throwable;
-use Contract\Exception\ServiceErrorException;
+use Princebo\Contract\Exception\ServiceErrorException;
 
 /**
  * 错误码常量

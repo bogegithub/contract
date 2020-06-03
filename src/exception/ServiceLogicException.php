@@ -1,6 +1,6 @@
 <?php
 
-namespace Contract\Exception;
+namespace Princebo\Contract\Exception;
 
 /**
  * 业务逻辑异常类

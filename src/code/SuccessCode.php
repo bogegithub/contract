@@ -6,7 +6,7 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Code;
+namespace Princebo\Contract\Code;
 
 /**
  * 成功返回编码

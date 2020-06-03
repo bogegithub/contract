@@ -6,10 +6,10 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Domain;
+namespace Princebo\Contract\Domain;
 
 
-use Contract\Exception\ServiceValidException;
+use Princebo\Contract\Exception\ServiceValidException;
 
 /**
  * 默认的轻量翻页实现

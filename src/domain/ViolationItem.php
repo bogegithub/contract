@@ -6,9 +6,9 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Domain;
+namespace Princebo\Contract\Domain;
 
-interface ViolationItem {
+interface ViolationItem{
 
     /**
      * 获取验证失败的字段名
@@ -20,7 +20,7 @@ interface ViolationItem {
      * 设置验证失败的字段名
      * @param string field 验证失败的字段名
      */
-    function setField(string $field);
+    function setField (string $field);
 
     /**
      * 获取验证失败的信息

@@ -6,9 +6,9 @@
  * Date: 2020/6/2
  * Time: 20:42
  */
-namespace Contract\Exception;
+namespace Princebo\Contract\Exception;
 
-use Contract\Code\CommonCode;
+use Princebo\Contract\Code\CommonCode;
 
 /**
  * 验证参数异常类
