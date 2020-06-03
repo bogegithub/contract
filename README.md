@@ -8,5 +8,4 @@
 
 ### [异常规约](exception-convention.md)
 ### [Controller返回规约](controller-convention.md)
-### [Model规约](model-convention.md)
 ### [路由规约](router-convention.md)

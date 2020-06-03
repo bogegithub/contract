@@ -115,7 +115,7 @@ ServiceErrorException、ServiceLogicException、ServiceValidException这三个�
 具体见下表:
 
 | code | 含义 | 对应异常 | 对应枚举类型 | 备注 |
-| - | - | - | - | - |
+| :---- | :---- | :---- | :----| :----|
 | 0 | 成功 | 无 | SuccessCode | |
 | 1 | 未知异常  |  ServiceErrorException | ErrorCode | 兼容老系统
 | SYS_数字 | 系统错误  | ServiceErrorException | ErrorCode | 新的系统错误编码规范都是`SYS_数字`的组合方式，比如SYS_1 表示数据库异常

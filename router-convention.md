@@ -4,8 +4,8 @@
 
 `正例`
 
-|动词 | 操作 |
-| :-: | :- | 
+| 动词 | 操作 |
+| :---- | :---- | 
 | GET | 查询 |
 | POST | 增加、删除、修改 |
 
@@ -15,7 +15,7 @@
 `正例`
 
 | 动词 | 路径 | 方法 | 类名 | 描述 |
-| :-: | :- | :-: | :-: | :- |
+| :---- |:---- | :---- | :---- |:----|
 | GET | /message/get?id={id} | show | MessageController | 获取单条数据 |
 | GET | /message/list | list | MessageController | 获取多条、分页数据 |
 | GET | /message/count | count | MessageController | 获取总数 |
