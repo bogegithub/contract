@@ -139,52 +139,6 @@ return Results.success(
 }
 ```
 
-#### 游标翻页
-【推荐】：约定数据量较大且按照时间倒序的分页优先使用CursorPage游标分页来提升查询性能
-具体可以看一下[用Twitter的cursor方式进行Web数据分页](https://timyang.net/web/pagination/) 这篇文章
-
-cursorPage
-```php
-return Results.success(Pages.cursorPage($results,
-                                 $hasNext,
-                                 $nextCursor,
-                                 $pageCursor,
-                                 $pageSize));
-```
-
-序列化生成的JSON为：
-```$json
-{
-    code:"0",
-    message:"成功！"
-    data: {
-        pageNumber:10, //当前页
-        pageSize:20, //每页显示记录数
-        hasNext:true, //有无下一页
-        pageCursor:12121223231323, // 当前页面的游标
-        nextCursor:12121223232323, // 下一页的游标
-        // 记录集合
-        results:[
-            {
-                id: 1,
-                name: "小凤"
-                age: 20
-            },
-            {
-                id: 2,
-                name: "小米"
-                age: 20
-            },
-            {
-                id: 3,
-                name: "小高"
-                age: 20
-            }
-        ];
-    }
-}
-```
-
 ### 校验失败
 
 ```php
